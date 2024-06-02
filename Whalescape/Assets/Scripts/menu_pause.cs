@@ -9,6 +9,23 @@ public class menu_pause : MonoBehaviour
     [SerializeField] GameObject pausaMenu;
     [SerializeField] GameObject settingsMenu;
 
+
+    private bool gameIsPaused;
+void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameIsPaused = !gameIsPaused; //se precionar a tecla "Esc" a variável gameIsPaused muda de estado 
+            if (gameIsPaused) 
+            {
+                Pausa(); 
+            }
+            else 
+            { 
+                Quit(); 
+            }
+        }
+    }
     public void Pausa()
     {
         //btn pausa durante o jogo
