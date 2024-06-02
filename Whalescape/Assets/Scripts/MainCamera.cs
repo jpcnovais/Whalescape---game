@@ -23,7 +23,7 @@ public class CamaraPrincipal : MonoBehaviour
         }
 
 
-        offset = new Vector3(-1.26f, 0f, 0f);
+        offset = new Vector3(-0.8f, 0.2f, 0f);
     }
 
     void LateUpdate()
