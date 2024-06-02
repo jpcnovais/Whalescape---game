@@ -33,7 +33,7 @@ public class CamaraPrincipal : MonoBehaviour
         {
             transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, player.position.z + offset.z);
 
-            Debug.Log("Camera position: " + transform.position);
+            
         }
     }
 }

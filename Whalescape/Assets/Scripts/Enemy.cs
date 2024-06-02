@@ -16,6 +16,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private bool isMovingLeft;
 
+    private float tolerance = 0.1f; // Tolerância para evitar tremores
+
     void Start()
     {
         if (checkpoint1.position.x > checkpoint2.position.x)
@@ -28,15 +30,15 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        // Depuração
-        Debug.Log("Update - posição do inimigo: " + transform.position);
+        // Depuração para verificar a posição do inimigo
+        Debug.Log("Update - Posição do inimigo: " + transform.position);
     }
 
     void FixedUpdate()
     {
         if (isMovingLeft)
         {
-            if (transform.position.x < checkpoint1.position.x)
+            if (transform.position.x <= checkpoint1.position.x + tolerance)
             {
                 isMovingLeft = !isMovingLeft;
                 Debug.Log("Chegou ao checkpoint1, mudando direção para a direita");
@@ -44,7 +46,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            if (transform.position.x > checkpoint2.position.x)
+            if (transform.position.x >= checkpoint2.position.x - tolerance)
             {
                 isMovingLeft = !isMovingLeft;
                 Debug.Log("Chegou ao checkpoint2, mudando direção para a esquerda");
@@ -52,10 +54,8 @@ public class Enemy : MonoBehaviour
         }
         int direction = isMovingLeft ? -1 : 1;
         transform.position += new Vector3(direction * speed * Time.deltaTime, 0, 0);
-        GetComponent<SpriteRenderer>().flipX = !isMovingLeft;
 
-        // Depuração
-        Debug.Log("FixedUpdate - posição do inimigo: " + transform.position);
-        Debug.Log("FixedUpdate - direção: " + (isMovingLeft ? "esquerda" : "direita"));
+        // Log para verificar direção e posição
+        Debug.Log("FixedUpdate - Posição do inimigo: " + transform.position + ", direção: " + (isMovingLeft ? "esquerda" : "direita"));
     }
 }
