@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
+    [SerializeField]
     private string nextscene;
     private Rigidbody playerRb;
     [SerializeField]
@@ -75,13 +76,6 @@ public class Player : MonoBehaviour
         playerRb.velocity = new Vector3(playerRb.velocity.x, playerRb.velocity.y, horizontal * movementSpeed);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("ground"))
-        {
-            grounded = true;
-        }
-    }
 
     private void OnCollisionExit(Collision collision)
     {
@@ -91,44 +85,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "plataforma")
+        if (collision.gameObject.CompareTag("ground"))
         {
             grounded = true;
-            canDoubleJump = false;
-
         }
 
-        if (collision.gameObject.tag == "LimiteEcra")
-        {
-            Debug.Log("Colisão com o bordo do ecrã");
 
-            if (vidas > 0)
-            {
-                if (vidas <= images.Count)
-                {
-                    Debug.Log("Desativando imagem " + vidas);
-                    images[vidas - 1].gameObject.SetActive(false);
-
-                }
-
-                vidas--;
-                if (vidas == 0)
-                {
-                    if (SceneManager.GetActiveScene().name == "nivel1")
-                    {
-                        SceneManager.LoadScene("gameover1");
-                    }
-                    else if (SceneManager.GetActiveScene().name == "nivel2")
-                    {
-                        SceneManager.LoadScene("gameover2");
-                    }
-                }
-            }
-        }
-
-        if (collision.gameObject.tag == "Inimigos")
+        if (collision.gameObject.CompareTag("Inimigos"))
         {
             Debug.Log("Colisão com inimigo");
 
