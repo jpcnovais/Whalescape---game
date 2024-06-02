@@ -15,20 +15,19 @@ void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gameIsPaused = !gameIsPaused; //se precionar a tecla "Esc" a variável gameIsPaused muda de estado 
-            if (gameIsPaused) 
+            gameIsPaused = !gameIsPaused;
+            if (gameIsPaused)
             {
-                Pausa(); 
+                Pausa();
             }
-            else 
-            { 
-                Quit(); 
+            else
+            {
+                Quit();
             }
         }
     }
     public void Pausa()
     {
-        //btn pausa durante o jogo
         pausaMenu.SetActive(true);
         settingsMenu.SetActive(false);
         Time.timeScale = 0;

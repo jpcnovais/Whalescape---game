@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        horizontal = -Input.GetAxis("Horizontal"); // Invertendo o valor
+        horizontal = -Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Jump"))
         {
