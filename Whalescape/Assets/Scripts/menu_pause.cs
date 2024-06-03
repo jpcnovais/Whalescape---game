@@ -11,7 +11,13 @@ public class menu_pause : MonoBehaviour
 
 
     private bool gameIsPaused;
-void Update()
+
+    public void Start()
+    {
+        pausaMenu.SetActive(false);
+        settingsMenu.SetActive(false);
+    }
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -60,8 +66,5 @@ void Update()
         Time.timeScale = 1;
     }
 
-    public void Start()
-    {
-        pausaMenu.SetActive(false);
-    }
+
 }
