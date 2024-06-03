@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cenario2.unity
     guid: 7c0d65a8bfd212d409053d4ee4cc9ed4
+  - enabled: 1
+    path: Assets/Scenes/gameover.unity
+    guid: aa3de4f52eddf7843b2af53c9dbe0b44
+  - enabled: 1
+    path: Assets/Scenes/continua.unity
+    guid: f8f3a02514ccc0542a88cde80cf7c750
   m_configObjects: {}
