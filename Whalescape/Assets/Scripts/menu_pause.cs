@@ -34,6 +34,7 @@ public class menu_pause : MonoBehaviour
     }
     public void Pausa()
     {
+        
         pausaMenu.SetActive(true);
         settingsMenu.SetActive(false);
         Time.timeScale = 0;
