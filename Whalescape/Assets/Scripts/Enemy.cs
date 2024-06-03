@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
         int direction = isMovingLeft ? -1 : 1;
         transform.position += new Vector3(direction * speed * Time.deltaTime, 0, 0);
 
-        // Virar o inimigo na direção do movimento
+        // Virar o inimigo na direção do movimento Ajuda
         transform.rotation = Quaternion.Euler(0, isMovingLeft ? 180 : 0, 0);
     }
 }
