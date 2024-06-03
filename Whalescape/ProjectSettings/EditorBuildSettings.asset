@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/cenario1.unity
-    guid: b8a9783776754404193891ba09c28941
-  - enabled: 1
     path: Assets/Scenes/paginainicial.unity
     guid: 8b64d4c6d7415c644a0ff32d72877632
+  - enabled: 1
+    path: Assets/Scenes/cenario1.unity
+    guid: b8a9783776754404193891ba09c28941
   - enabled: 1
     path: Assets/Scenes/cenario2.unity
     guid: 7c0d65a8bfd212d409053d4ee4cc9ed4
