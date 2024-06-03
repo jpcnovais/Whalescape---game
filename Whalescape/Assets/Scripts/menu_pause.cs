@@ -61,7 +61,9 @@ public class menu_pause : MonoBehaviour
     }
     public void Quit()
     {
-        SceneManager.LoadScene("paginainicial");
+        //SceneManager.LoadScene("paginainicial");
+        Application.Quit();
+
     }
 
 
