@@ -45,9 +45,8 @@ public class pg_inicial : MonoBehaviour
     }
     public void Quit()
     {
-        /*pausaMenu.SetActive(false);
-        settingsMenu.SetActive(false);
-        Time.timeScale = 1;*/
+        Application.Quit();
+
     }
 
     public void PlayGame()
