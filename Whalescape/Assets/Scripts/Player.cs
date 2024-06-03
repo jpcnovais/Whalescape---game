@@ -112,14 +112,7 @@ public class Player : MonoBehaviour
 
                 if (vidas == 0)
                 {
-                    if (SceneManager.GetActiveScene().name == "cenario1")
-                    {
-                        SceneManager.LoadScene("gameover1");
-                    }
-                    else if (SceneManager.GetActiveScene().name == "cenario2")
-                    {
-                        SceneManager.LoadScene("gameover2");
-                    }
+                    SceneManager.LoadScene("gameover");
                 }
             }
         }
