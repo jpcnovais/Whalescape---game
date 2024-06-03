@@ -52,7 +52,7 @@ public class pg_inicial : MonoBehaviour
 
     public void PlayGame()
     {
-        PlayerPrefs.SetInt("score", 0);
+        //PlayerPrefs.SetInt("score", 0);
         SceneManager.LoadScene("cenario1");
     }
 }
