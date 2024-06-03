@@ -34,7 +34,6 @@ public class menu_pause : MonoBehaviour
     }
     public void Pausa()
     {
-        
         pausaMenu.SetActive(true);
         settingsMenu.SetActive(false);
         Time.timeScale = 0;
@@ -62,9 +61,7 @@ public class menu_pause : MonoBehaviour
     }
     public void Quit()
     {
-        pausaMenu.SetActive(false);
-        settingsMenu.SetActive(false);
-        Time.timeScale = 1;
+        SceneManager.LoadScene("paginainicial");
     }
 
 
