@@ -59,4 +59,9 @@ void Update()
         settingsMenu.SetActive(false);
         Time.timeScale = 1;
     }
+
+    public void Start()
+    {
+        pausaMenu.SetActive(false);
+    }
 }
