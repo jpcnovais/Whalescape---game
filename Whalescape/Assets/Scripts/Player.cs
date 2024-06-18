@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
     [SerializeField]
     private string nextscene;
     private Rigidbody playerRb;
@@ -73,7 +72,22 @@ public class Player : MonoBehaviour
 
     private void HandleMovement()
     {
-        playerRb.velocity = new Vector3(playerRb.velocity.x, playerRb.velocity.y, horizontal * movementSpeed);
+       // playerRb.velocity = new Vector3(playerRb.velocity.x, playerRb.velocity.y, horizontal * movementSpeed);
+        float horizontal = 0;
+        float vertical = 0;
+
+        // Mapeamento das teclas para os eixos desejados
+        if (Input.GetKey(KeyCode.D)) vertical = -1;     // Frente (eixo Z positivo)
+        if (Input.GetKey(KeyCode.A)) vertical = 1;    // Trás (eixo Z negativo)
+        if (Input.GetKey(KeyCode.S)) horizontal = -1; // Esquerda (eixo X negativo)
+        if (Input.GetKey(KeyCode.W)) horizontal = 1;
+
+        // Calcula a direção do movimento
+        Vector3 moveDirection = new Vector3(horizontal, 0, vertical).normalized;
+        Vector3 velocity = moveDirection * movementSpeed;
+
+        // Aplica a velocidade ao Rigidbody
+        playerRb.velocity = new Vector3(velocity.x, playerRb.velocity.y, velocity.z);
     }
 
 

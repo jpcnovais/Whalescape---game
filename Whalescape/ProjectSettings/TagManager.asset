@@ -10,6 +10,8 @@ TagManager:
   - coracao
   - SpawnPoint
   - elevador
+  - Bomb
+  - Boss
   layers:
   - Default
   - TransparentFX
