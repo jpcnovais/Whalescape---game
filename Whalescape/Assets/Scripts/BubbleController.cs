@@ -52,4 +52,6 @@ public class BubbleController : MonoBehaviour
             Destroy(fireball, 3f);
         }
     }
+
+    
 }
