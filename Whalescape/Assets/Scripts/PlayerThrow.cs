@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
     private float nextFireTime = 0f;
     private bool isCoolingDown = false;
 
+    public GameObject projectilePrefab; // Prefab do projétil
+    public Transform launchPoint; // Ponto de lançamento do projétil
+    public float launchForce; // Força inicial do lançamento
+    public float angle; // Ângulo de lançamento em graus
+
     void Start()
     {
         // Configura o fillAmount para 1 no início para representar o cooldown completo
@@ -34,16 +39,24 @@ public class PlayerController : MonoBehaviour
 
     void FireBomb()
     {
-        // Instanciar a bomba no ponto de spawn com a rotação atual do ponto de spawn
-        GameObject bomb = Instantiate(bombPrefab, bombSpawnPoint.position, bombSpawnPoint.rotation);
-
-        // Aplicar força à bomba para que ela se mova na direção em que o jogador está olhando
-        Rigidbody bombRigidbody = bomb.GetComponent<Rigidbody>();
-        if (bombRigidbody != null)
         {
-            // Ajuste a força e velocidade de acordo com as necessidades do seu jogo
-            bombRigidbody.AddForce(bombSpawnPoint.forward * 500f, ForceMode.Impulse);
-            bombRigidbody.velocity = bombSpawnPoint.forward * 10f;
+           // Instancia a bomba na posição do ponto de lançamento
+        GameObject bomb = Instantiate(bombPrefab, launchPoint.position, launchPoint.rotation);
+
+        // Obtém o Rigidbody da bomba
+        Rigidbody rb = bomb.GetComponent<Rigidbody>();
+
+        // Define a direção de lançamento apenas no eixo Z
+        Vector3 launchDirection = Vector3.forward;
+
+        // Converte a direção de lançamento para as coordenadas locais do jogador
+        launchDirection = transform.TransformDirection(launchDirection);
+
+        // Aplica a força à bomba na direção do eixo Z
+        rb.AddForce(launchDirection * launchForce, ForceMode.Impulse);
+
+        // Destrói a bomba após 3 segundos
+        Destroy(bomb, 3f);
         }
     }
 
