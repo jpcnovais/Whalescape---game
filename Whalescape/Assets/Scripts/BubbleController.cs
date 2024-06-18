@@ -30,9 +30,22 @@ public class BubbleController : MonoBehaviour
 
     void LookAtPlayer()
     {
-        Vector3 originalPosition = transform.position;
-        transform.LookAt(player);
-        transform.position = originalPosition;
+       // Determine which direction to rotate towards
+        Vector3 targetDirection = player.position - transform.position;
+
+        targetDirection.y = 0;
+
+        // The step size is equal to speed times frame time.
+        float singleStep = 2 * Time.deltaTime;
+
+        // Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+
+        // Draw a ray pointing at our target in
+        Debug.DrawRay(transform.position, newDirection, Color.red);
+
+        // Calculate a rotation a step closer to the target and applies rotation to this object
+        transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
     void ShootFireballs()
@@ -52,6 +65,4 @@ public class BubbleController : MonoBehaviour
             Destroy(fireball, 3f);
         }
     }
-
-    
 }
