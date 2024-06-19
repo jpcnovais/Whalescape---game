@@ -8,6 +8,7 @@ public class BubbleController : MonoBehaviour
     public Transform launchPoint;
     public float launchForce = 10f;
     public float shootInterval = 2f;
+    public float detectionRange = 30f; // Distância de detecção do player
 
     private float shootTimer;
 
@@ -21,7 +22,9 @@ public class BubbleController : MonoBehaviour
         LookAtPlayer();
         shootTimer -= Time.deltaTime;
 
-        if (shootTimer <= 0)
+        // Verifica a distância entre o boss e o player
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        if (distanceToPlayer <= detectionRange && shootTimer <= 0)
         {
             ShootFireballs();
             shootTimer = shootInterval;
@@ -57,7 +60,7 @@ public class BubbleController : MonoBehaviour
 
         // Determine if more fireballs should be fired based on probabilities
         float randomValue = Random.value;
-        if (randomValue < 0.1f) // 20% chance to shoot three fireballs
+        if (randomValue < 0.2f) // 20% chance to shoot three fireballs
         {
             fireballCount = 3;
         }

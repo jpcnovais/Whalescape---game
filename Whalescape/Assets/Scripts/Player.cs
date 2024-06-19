@@ -29,17 +29,21 @@ public class Player : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
 
-        GameObject spawnPointObject = GameObject.FindWithTag("SpawnPoint");
-
-        if (spawnPointObject != null)
+        // Verifica se a cena atual é "cenarioboss"
+        if (SceneManager.GetActiveScene().name != "cenarioboss")
         {
-            spawnPoint = spawnPointObject.transform;
+            GameObject spawnPointObject = GameObject.FindWithTag("SpawnPoint");
 
-            transform.position = spawnPoint.position;
-        }
-        else
-        {
-            Debug.LogWarning("Spawn point não encontrado na cena.");
+            if (spawnPointObject != null)
+            {
+                spawnPoint = spawnPointObject.transform;
+
+                transform.position = spawnPoint.position;
+            }
+            else
+            {
+                Debug.LogWarning("Spawn point não encontrado na cena.");
+            }
         }
     }
 
@@ -113,9 +117,13 @@ public class Player : MonoBehaviour
 
             if (vidas > 0)
             {
-                Vector3 PlatPosition = spawnPoint.position;
-                PlatPosition.x += 0.5f;
-                this.gameObject.transform.position = PlatPosition;
+                // Verifica se não estamos na cena "cenarioboss" antes de mover o jogador
+                if (SceneManager.GetActiveScene().name != "cenarioboss")
+                {
+                    Vector3 PlatPosition = spawnPoint.position;
+                    PlatPosition.x += 0.5f;
+                    this.gameObject.transform.position = PlatPosition;
+                }
 
                 if (vidas <= images.Count)
                 {
@@ -140,9 +148,13 @@ public class Player : MonoBehaviour
     {
         if (vidas > 0)
         {
-            Vector3 PlatPosition = spawnPoint.position;
-            PlatPosition.x += 0.5f;
-            this.gameObject.transform.position = PlatPosition;
+            // Verifica se não estamos na cena "cenarioboss" antes de mover o jogador
+            if (SceneManager.GetActiveScene().name != "cenarioboss")
+            {
+                Vector3 PlatPosition = spawnPoint.position;
+                PlatPosition.x += 0.5f;
+                this.gameObject.transform.position = PlatPosition;
+            }
 
             if (vidas <= images.Count)
             {
