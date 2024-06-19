@@ -136,4 +136,26 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(nextscene);
         }
     }
+
+    public void TakeDamage()
+    {
+        if (vidas > 0)
+        {
+            Vector3 PlatPosition = spawnPoint.position;
+            PlatPosition.x += 0.5f;
+            this.gameObject.transform.position = PlatPosition;
+
+            if (vidas <= images.Count)
+            {
+                Debug.Log("Desativando imagem " + vidas);
+                images[vidas - 1].gameObject.SetActive(false);
+            }
+            vidas--;
+
+            if (vidas == 0)
+            {
+                SceneManager.LoadScene("gameover");
+            }
+        }
+    }
 }

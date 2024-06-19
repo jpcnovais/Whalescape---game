@@ -30,7 +30,7 @@ public class BubbleController : MonoBehaviour
 
     void LookAtPlayer()
     {
-       // Determine which direction to rotate towards
+        // Determine which direction to rotate towards
         Vector3 targetDirection = player.position - transform.position;
 
         targetDirection.y = 0;
@@ -52,7 +52,21 @@ public class BubbleController : MonoBehaviour
     {
         float[] angles = { -40f, -20f, 0f, 20f, 40f };
         angles = angles.OrderBy(x => Random.value).ToArray();
-        float[] selectedAngles = angles.Take(3).ToArray();
+
+        int fireballCount = 1; // Always shoot at least one fireball
+
+        // Determine if more fireballs should be fired based on probabilities
+        float randomValue = Random.value;
+        if (randomValue < 0.1f) // 20% chance to shoot three fireballs
+        {
+            fireballCount = 3;
+        }
+        else if (randomValue < 0.4f) // 40% chance to shoot two fireballs
+        {
+            fireballCount = 2;
+        }
+
+        float[] selectedAngles = angles.Take(fireballCount).ToArray();
 
         foreach (float angle in selectedAngles)
         {
@@ -61,7 +75,7 @@ public class BubbleController : MonoBehaviour
             Vector3 direction = Quaternion.Euler(0, angle, 0) * transform.forward;
             rb.AddForce(direction * launchForce, ForceMode.Impulse);
 
-            // Destruir a bola de fogo após 3 segundos
+            // Destroy the fireball after 3 seconds
             Destroy(fireball, 3f);
         }
     }
