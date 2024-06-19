@@ -15,15 +15,5 @@ public class BombController : MonoBehaviour
             }
             Destroy(gameObject); // Destruir a bomba após colidir com o boss
         }
-
-        if (collision.gameObject.CompareTag("player"))
-        {
-            Player player = collision.gameObject.GetComponent<Player>();
-            if (player != null)
-            {
-                player.TakeDamage();
-            }
-            Destroy(gameObject); // Destrói a bomba após atingir o player
-        }
     }
 }

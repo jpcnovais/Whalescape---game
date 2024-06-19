@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
 
     private Transform spawnPoint;
 
-
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
@@ -46,8 +45,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        horizontal = -Input.GetAxis("Horizontal");
-
         if (Input.GetButtonDown("Jump"))
         {
             if (grounded)
@@ -72,24 +69,28 @@ public class Player : MonoBehaviour
 
     private void HandleMovement()
     {
-       // playerRb.velocity = new Vector3(playerRb.velocity.x, playerRb.velocity.y, horizontal * movementSpeed);
-        float horizontal = 0;
-        float vertical = 0;
+        float moveX = 0;
+        float moveZ = 0;
 
         // Mapeamento das teclas para os eixos desejados
-        if (Input.GetKey(KeyCode.D)) vertical = -1;     // Frente (eixo Z positivo)
-        if (Input.GetKey(KeyCode.A)) vertical = 1;    // Trás (eixo Z negativo)
-        if (Input.GetKey(KeyCode.S)) horizontal = -1; // Esquerda (eixo X negativo)
-        if (Input.GetKey(KeyCode.W)) horizontal = 1;
+        if (Input.GetKey(KeyCode.A)) moveZ = 1;    // Frente (eixo Z positivo)
+        if (Input.GetKey(KeyCode.D)) moveZ = -1;   // Trás (eixo Z negativo)
+        if (Input.GetKey(KeyCode.S)) moveX = -1;   // Esquerda (eixo X negativo)
+        if (Input.GetKey(KeyCode.W)) moveX = 1;    // Direita (eixo X positivo)
 
         // Calcula a direção do movimento
-        Vector3 moveDirection = new Vector3(horizontal, 0, vertical).normalized;
+        Vector3 moveDirection = new Vector3(moveX, 0, moveZ).normalized;
         Vector3 velocity = moveDirection * movementSpeed;
+
+        // Alinha a rotação do jogador com a direção do movimento
+        if (moveDirection != Vector3.zero)
+        {
+            transform.forward = moveDirection;
+        }
 
         // Aplica a velocidade ao Rigidbody
         playerRb.velocity = new Vector3(velocity.x, playerRb.velocity.y, velocity.z);
     }
-
 
     private void OnCollisionExit(Collision collision)
     {
@@ -105,7 +106,6 @@ public class Player : MonoBehaviour
         {
             grounded = true;
         }
-
 
         if (collision.gameObject.CompareTag("Inimigos"))
         {
@@ -130,7 +130,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-
         else if (collision.gameObject.tag == "elevador")
         {
             SceneManager.LoadScene(nextscene);

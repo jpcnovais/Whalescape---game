@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7939245188261316849}
   - component: {fileID: 4437578318043641073}
   - component: {fileID: 2276387351084004118}
+  - component: {fileID: 3690868983603881864}
   m_Layer: 0
   m_Name: bubble
   m_TagString: Untagged
@@ -133,3 +134,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3690868983603881864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3454060007550494950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df960ff181f705e4cb63d9ca8fe6d358, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
