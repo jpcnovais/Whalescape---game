@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/cenario1.unity
     guid: b8a9783776754404193891ba09c28941
   - enabled: 1
+    path: Assets/Scenes/cenario3.unity
+    guid: d4949a86f1bbfdf49805637b7cc36996
+  - enabled: 1
     path: Assets/Scenes/cenario2.unity
     guid: 7c0d65a8bfd212d409053d4ee4cc9ed4
+  - enabled: 1
+    path: Assets/Scenes/cenarioboss.unity
+    guid: 3f272b59b84755443907368d3004b19f
   - enabled: 1
     path: Assets/Scenes/gameover.unity
     guid: aa3de4f52eddf7843b2af53c9dbe0b44
