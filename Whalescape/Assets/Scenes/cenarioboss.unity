@@ -1543,7 +1543,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533984267}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: da320fc34b02ce1428abba8269496119, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -4380,7 +4380,7 @@ GameObject:
   - component: {fileID: 1442381603}
   - component: {fileID: 1442381602}
   m_Layer: 0
-  m_Name: ajudaboss-02
+  m_Name: tabelaajuda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5912,7 +5912,7 @@ GameObject:
   - component: {fileID: 1886376755}
   - component: {fileID: 1886376759}
   m_Layer: 0
-  m_Name: AAAAAAAAA
+  m_Name: boss
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

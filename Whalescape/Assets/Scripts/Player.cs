@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     private List<Image> images = new List<Image>();
 
     private Transform spawnPoint;
+    public SceneController sceneController;
 
     void Start()
     {
@@ -134,7 +135,7 @@ public class Player : MonoBehaviour
 
                 if (vidas == 0)
                 {
-                    SceneManager.LoadScene("gameover");
+                     sceneController.LoadGameOver();
                 }
             }
         }
@@ -165,7 +166,7 @@ public class Player : MonoBehaviour
 
             if (vidas == 0)
             {
-                SceneManager.LoadScene("gameover");
+                sceneController.LoadGameOver();
             }
         }
     }
