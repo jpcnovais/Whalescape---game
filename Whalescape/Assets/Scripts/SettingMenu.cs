@@ -34,4 +34,10 @@ public class SettingMenu : MonoBehaviour
         settingsMenu.SetActive(false);
     }
 
+    public void FecharSettingsPg_Inicial()
+    {
+        
+        settingsMenu.SetActive(false);
+    }
+
 }
