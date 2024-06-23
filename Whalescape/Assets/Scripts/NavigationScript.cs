@@ -29,9 +29,9 @@ public class NavigationScript : MonoBehaviour
 
     //patrulha
     public Vector3 walkPoint;
-    bool walkPointSet;    
+    bool walkPointSet;
     public float walkPointRange;
-    
+
     //estados
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
@@ -48,16 +48,16 @@ public class NavigationScript : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange) 
+        if (!playerInSightRange)
         {
             Patroling();
         }
         if (playerInSightRange)
         {
             ChasePlayer();
-        } 
+        }
 
-        
+
     }
 
     private void Patroling()
@@ -65,12 +65,13 @@ public class NavigationScript : MonoBehaviour
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
-        {}agent.SetDestination(walkPoint);
+        { }
+        agent.SetDestination(walkPoint);
 
-        Vector3 distanceToWalkPoint = transform.position - walkPoint;  
+        Vector3 distanceToWalkPoint = transform.position - walkPoint;
 
         //walkpoint alcançado
-        if (distanceToWalkPoint.magnitude <1f)
+        if (distanceToWalkPoint.magnitude < 1f)
             walkPointSet = false;
     }
 
@@ -79,11 +80,11 @@ public class NavigationScript : MonoBehaviour
         //calcular um ponto aleatório
         float randomZ = Random.Range(-walkPointRange, walkPointRange);
         float randomX = Random.Range(-walkPointRange, walkPointRange);
-        
+
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         //verificar se o ponto não vai para fora do mapa
-        if (Physics.Raycast( walkPoint, -transform.up, 2f, whatIsGround))
+        if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
         {
             walkPointSet = true;
         }
@@ -92,7 +93,7 @@ public class NavigationScript : MonoBehaviour
 
     private void ChasePlayer()
     {
-        agent.SetDestination (player.position);
+        agent.SetDestination(player.position);
         Debug.Log("entrou na area");
 
     }
