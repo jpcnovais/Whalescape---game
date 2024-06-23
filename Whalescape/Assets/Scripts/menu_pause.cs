@@ -8,6 +8,7 @@ public class menu_pause : MonoBehaviour
 
     [SerializeField] GameObject pausaMenu;
     [SerializeField] GameObject settingsMenu;
+    
 
 
     private bool gameIsPaused;
@@ -28,7 +29,7 @@ public class menu_pause : MonoBehaviour
             }
             else
             {
-                Quit();
+                Resume();
             }
         }
     }
