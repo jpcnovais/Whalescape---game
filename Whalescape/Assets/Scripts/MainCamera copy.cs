@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamaraPrincipal : MonoBehaviour
+public class CamaraPrincipal2 : MonoBehaviour
 {
     private Transform player;
     private Vector3 offset;
