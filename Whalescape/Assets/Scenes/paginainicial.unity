@@ -1169,7 +1169,7 @@ RectTransform:
   m_Father: {fileID: 974485072}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2218,8 +2218,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2025134950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -18.4559, y: -0.2745}
   m_SizeDelta: {x: 36.9121, y: -14.2756}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3140,7 +3140,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1435861806}
         m_TargetAssemblyTypeName: pg_inicial, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3406,7 +3406,7 @@ RectTransform:
   m_Father: {fileID: 931231778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3608,7 +3608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1661938300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3736,8 +3736,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 84662086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -18.4559, y: -0.2745}
   m_SizeDelta: {x: 36.9121, y: -14.2756}
   m_Pivot: {x: 0.5, y: 0.5}
