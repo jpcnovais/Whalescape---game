@@ -2112,7 +2112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 144, y: -134}
+  m_AnchoredPosition: {x: 104, y: -134}
   m_SizeDelta: {x: 151.3712, y: 68.3094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &165299847
@@ -4005,7 +4005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325, y: -47}
+  m_AnchoredPosition: {x: 285, y: -12.8}
   m_SizeDelta: {x: 110.9923, y: 50.0748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &381640624
@@ -5139,8 +5139,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6434,7 +6434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &594311105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7399,7 +7399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &721879390
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8112,7 +8112,7 @@ RectTransform:
   m_Father: {fileID: 2000237453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10040,8 +10040,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7650005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -18.4559, y: -0.2745}
   m_SizeDelta: {x: 36.9121, y: -14.2756}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -10781,8 +10781,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 295.40027, y: 185.23181}
-  m_SizeDelta: {x: 75.2574, y: 80.5518}
+  m_AnchoredPosition: {x: 255, y: 151}
+  m_SizeDelta: {x: 38.7625, y: 41.4895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143806215
 MonoBehaviour:
@@ -12543,8 +12543,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2093410652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -18.4559, y: -0.2745}
   m_SizeDelta: {x: 36.9121, y: -14.2756}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -14572,7 +14572,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259, y: -316}
+  m_AnchoredPosition: {x: 54.7, y: -75.7}
   m_SizeDelta: {x: 110.9923, y: 50.0748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679960066
@@ -14622,8 +14622,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.9
-  m_fontSizeBase: 44.9
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -17929,7 +17929,7 @@ RectTransform:
   m_Father: {fileID: 1988261246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -19079,6 +19079,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 571811906517784167, guid: 842aa51591238f2468c1fd3441ea9eec, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: da320fc34b02ce1428abba8269496119, type: 2}
     - target: {fileID: 1400940839661781117, guid: 842aa51591238f2468c1fd3441ea9eec, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
