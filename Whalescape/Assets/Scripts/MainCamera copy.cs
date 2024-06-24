@@ -10,7 +10,7 @@ public class CamaraPrincipal2 : MonoBehaviour
     // Maximum Z position the camera can reach
     private float maxZ = 6.86f;
     // Minimum X position the camera can reach
-    private float minX = -15f;  // Adjust this value as needed
+    private float minX = -3f;  // Adjust this value as needed
 
     void Start()
     {
