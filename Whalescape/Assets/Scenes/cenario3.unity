@@ -2766,7 +2766,7 @@ Transform:
   m_GameObject: {fileID: 451160225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.98, y: -0.14, z: -1.03}
+  m_LocalPosition: {x: -4.02, y: -0.14, z: -1.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7872,6 +7872,59 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &1106267753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106267755}
+  - component: {fileID: 1106267754}
+  m_Layer: 0
+  m_Name: LIMITE PAREDE2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1106267754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106267753}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 18.726921, y: 9.435884, z: 3.5634165}
+  m_Center: {x: 2.5473385, y: 2.4867535, z: -1.2817082}
+--- !u!4 &1106267755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106267753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.894089, y: 1.0885491, z: -183.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1122721174
 GameObject:
   m_ObjectHideFlags: 0
@@ -10013,6 +10066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348396893}
   - component: {fileID: 1348396892}
+  - component: {fileID: 1348396894}
   m_Layer: 0
   m_Name: elevador
   m_TagString: Elevador
@@ -10035,12 +10089,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 21.285583, y: 8.851143, z: 0.2565155}
-  m_Center: {x: -0.8171902, y: 1.6883001, z: -3.3647232}
+  m_Size: {x: 21.285583, y: 8.851143, z: 1.4401245}
+  m_Center: {x: -0.8171902, y: 1.6883001, z: -2.7729187}
 --- !u!4 &1348396893
 Transform:
   m_ObjectHideFlags: 0
@@ -10050,12 +10104,25 @@ Transform:
   m_GameObject: {fileID: 1348396891}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.887, y: 1.766, z: -178.928}
+  m_LocalPosition: {x: -4.887, y: 1.766, z: -178.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1348396894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348396891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7240e01b85a62418b875aaefb9a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextscene: cenarioboss
 --- !u!1 &1390824849
 GameObject:
   m_ObjectHideFlags: 0
@@ -16851,3 +16918,4 @@ SceneRoots:
   - {fileID: 151922320}
   - {fileID: 921642437}
   - {fileID: 2018191598}
+  - {fileID: 1106267755}
