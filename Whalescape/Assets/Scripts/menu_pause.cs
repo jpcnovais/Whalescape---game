@@ -13,6 +13,16 @@ public class menu_pause : MonoBehaviour
 
     private bool gameIsPaused;
 
+    //Audio
+    AudioManager audioManager;
+
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+    //
+
     public void Start()
     {
         pausaMenu.SetActive(false);
@@ -22,6 +32,7 @@ public class menu_pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
             gameIsPaused = !gameIsPaused;
             if (gameIsPaused)
             {
@@ -35,6 +46,7 @@ public class menu_pause : MonoBehaviour
     }
     public void Pausa()
     {
+        audioManager.PlaySFX(audioManager.menu);
         pausaMenu.SetActive(true);
         settingsMenu.SetActive(false);
         Time.timeScale = 0;
@@ -52,6 +64,7 @@ public class menu_pause : MonoBehaviour
     }
     public void OpenSettings()
     {
+        audioManager.PlaySFX(audioManager.menu);
         pausaMenu.SetActive(false);
         settingsMenu.SetActive(true);
     }

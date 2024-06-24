@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -13,7 +15,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip power;
     public AudioClip menu;
-    public AudioClip punch;
+    public AudioClip damage;
+    public AudioClip hit;
+
+    AudioManager audioManager;
 
     private void Start()
     {
@@ -21,4 +26,8 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    public void PlaySFX(AudioClip clip)
+    {   
+        sfxSource.PlayOneShot(clip);
+    }
 }

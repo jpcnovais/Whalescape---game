@@ -26,6 +26,16 @@ public class Player : MonoBehaviour
     private Transform spawnPoint;
     public SceneController sceneController;
 
+    //Audio
+    AudioManager audioManager;
+
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+    //
+
     void Start()
     {
         playerRb = GetComponent<Rigidbody>();
@@ -149,6 +159,7 @@ public class Player : MonoBehaviour
     {
         if (vidas > 0)
         {
+            audioManager.PlaySFX(audioManager.damage);
             // Verifica se não estamos na cena "cenarioboss" antes de mover o jogador
             if (SceneManager.GetActiveScene().name != "cenarioboss")
             {

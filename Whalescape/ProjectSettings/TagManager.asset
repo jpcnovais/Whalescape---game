@@ -12,6 +12,7 @@ TagManager:
   - elevador
   - Bomb
   - Boss
+  - Audio
   layers:
   - Default
   - TransparentFX

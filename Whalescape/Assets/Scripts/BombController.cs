@@ -4,8 +4,19 @@ public class BombController : MonoBehaviour
 {
     public float bombDamage = 15f; // Quantidade de dano da bomba
 
+    //Audio
+    AudioManager audioManager;
+
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+    //
+
     void OnCollisionEnter(Collision collision)
     {
+        audioManager.PlaySFX(audioManager.hit);
         if (collision.gameObject.CompareTag("Boss"))
         {
             BossHealth bossHealth = collision.gameObject.GetComponent<BossHealth>();
