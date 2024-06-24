@@ -149,6 +149,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        
         else if (collision.gameObject.tag == "elevador")
         {
             SceneManager.LoadScene(nextscene);
