@@ -15,8 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/cenario3.unity
     guid: d4949a86f1bbfdf49805637b7cc36996
   - enabled: 1
+    path: Assets/Scenes/finaljogo.unity
+    guid: 81adc18da9c17dd41b52190854fe6206
+  - enabled: 1
     path: Assets/Scenes/cenario2.unity
     guid: 7c0d65a8bfd212d409053d4ee4cc9ed4
+  - enabled: 1
+    path: Assets/Scenes/creditosFinal.unity
+    guid: 8659563204e78424bb947f353109ded6
   - enabled: 1
     path: Assets/Scenes/cenarioboss.unity
     guid: 3f272b59b84755443907368d3004b19f

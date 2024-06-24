@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BossHealth : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class BossHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die(); // Implemente esta função se quiser que o boss morra ao atingir 0 de vida
+            Die(); 
         }
     }
 
@@ -31,7 +32,6 @@ public class BossHealth : MonoBehaviour
 
     void Die()
     {
-        // Implemente a lógica de morte do boss aqui (por exemplo, destruir o objeto do boss)
-        Destroy(gameObject);
+    SceneManager.LoadScene("finaljogo");
     }
 }

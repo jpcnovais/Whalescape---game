@@ -38,6 +38,21 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+
+        audioManager = FindObjectOfType<AudioManager>();
+        sceneController = FindObjectOfType<SceneController>();
+
+        if (audioManager == null)
+        {
+            Debug.LogError("AudioManager não encontrado!");
+        }
+
+        if (sceneController == null)
+        {
+            Debug.LogError("SceneController não encontrado!");
+        }
+
+
         playerRb = GetComponent<Rigidbody>();
 
         // Verifica se a cena atual é "cenarioboss"
