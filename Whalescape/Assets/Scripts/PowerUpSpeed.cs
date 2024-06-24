@@ -20,9 +20,6 @@ public class PowerUpSpeed : MonoBehaviour
     {
         Debug.Log("Colisão entre o personagem e o powerup");
 
-        //player.GetComponent<PlayerController>().movespeed += powerUpPower;
-        //nome do codigo do personagem
-
         Destroy(gameObject);
     }
 }

@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
         playerRb = GetComponent<Rigidbody>();
 
-        // Verifica se a cena atual é "cenarioboss"
+
         if (SceneManager.GetActiveScene().name != "cenarioboss")
         {
             GameObject spawnPointObject = GameObject.FindWithTag("SpawnPoint");
@@ -102,23 +102,22 @@ public class Player : MonoBehaviour
         float moveX = 0;
         float moveZ = 0;
 
-        // Mapeamento das teclas para os eixos desejados
-        if (Input.GetKey(KeyCode.A)) moveZ = 1;    // Frente (eixo Z positivo)
-        if (Input.GetKey(KeyCode.D)) moveZ = -1;   // Trás (eixo Z negativo)
-        if (Input.GetKey(KeyCode.S)) moveX = -1;   // Esquerda (eixo X negativo)
-        if (Input.GetKey(KeyCode.W)) moveX = 1;    // Direita (eixo X positivo)
 
-        // Calcula a direção do movimento
+        if (Input.GetKey(KeyCode.A)) moveZ = 1;
+        if (Input.GetKey(KeyCode.D)) moveZ = -1;
+        if (Input.GetKey(KeyCode.S)) moveX = -1;
+        if (Input.GetKey(KeyCode.W)) moveX = 1;
+
+
         Vector3 moveDirection = new Vector3(moveX, 0, moveZ).normalized;
         Vector3 velocity = moveDirection * movementSpeed;
 
-        // Alinha a rotação do jogador com a direção do movimento
         if (moveDirection != Vector3.zero)
         {
             transform.forward = moveDirection;
         }
 
-        // Aplica a velocidade ao Rigidbody
+
         playerRb.velocity = new Vector3(velocity.x, playerRb.velocity.y, velocity.z);
     }
 
@@ -143,7 +142,7 @@ public class Player : MonoBehaviour
 
             if (vidas > 0)
             {
-                // Verifica se não estamos na cena "cenarioboss" antes de mover o jogador
+
                 if (SceneManager.GetActiveScene().name != "cenarioboss")
                 {
                     Vector3 PlatPosition = spawnPoint.position;
@@ -164,7 +163,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        
+
         else if (collision.gameObject.tag == "elevador")
         {
             SceneManager.LoadScene(nextscene);
@@ -176,7 +175,7 @@ public class Player : MonoBehaviour
         if (vidas > 0)
         {
             audioManager.PlaySFX(audioManager.damage);
-            // Verifica se não estamos na cena "cenarioboss" antes de mover o jogador
+
             if (SceneManager.GetActiveScene().name != "cenarioboss")
             {
                 Vector3 PlatPosition = spawnPoint.position;

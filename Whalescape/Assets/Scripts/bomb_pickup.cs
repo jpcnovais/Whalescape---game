@@ -11,7 +11,7 @@ public class bomb_pickup : MonoBehaviour
     {
         coinPickupEffect = GetComponent<AudioSource>();
         scoreManager = FindObjectOfType<ScoreManager>();
-        elevadorTrigger = FindObjectOfType<ElevadorTrigger>(); // Encontra o ElevadorTrigger na cena
+        elevadorTrigger = FindObjectOfType<ElevadorTrigger>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -25,7 +25,7 @@ public class bomb_pickup : MonoBehaviour
 
             if (coinPickupEffect != null)
             {
-                coinPickupEffect.Play(); // Toca o som
+                coinPickupEffect.Play();
             }
 
             SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -40,7 +40,6 @@ public class bomb_pickup : MonoBehaviour
                 collider.enabled = false;
             }
 
-            // Sinaliza que a bomb foi coletada
             if (elevadorTrigger != null)
             {
                 elevadorTrigger.CollectBomb();

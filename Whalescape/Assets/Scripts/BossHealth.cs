@@ -21,7 +21,7 @@ public class BossHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die(); 
+            Die();
         }
     }
 

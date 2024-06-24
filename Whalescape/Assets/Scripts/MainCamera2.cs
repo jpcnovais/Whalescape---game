@@ -7,10 +7,10 @@ public class CamaraPrincipal2 : MonoBehaviour
     private Transform player;
     private Vector3 offset;
 
-    // Maximum Z position the camera can reach
+
     private float maxZ = 6.86f;
-    // Minimum X position the camera can reach
-    private float minX = -4f;  // Adjust this value as needed
+
+    private float minX = -4f;
 
     void Start()
     {
@@ -32,16 +32,13 @@ public class CamaraPrincipal2 : MonoBehaviour
     {
         if (player != null)
         {
-            // Calculate the new position
+
             Vector3 newPosition = new Vector3(player.position.x + offset.x, player.position.y + offset.y, player.position.z + offset.z);
-            
-            // Clamp the Z position to not exceed maxZ
+
             newPosition.z = Mathf.Min(newPosition.z, maxZ);
-            
-            // Clamp the X position to not go below minX
+
             newPosition.x = Mathf.Max(newPosition.x, minX);
 
-            // Set the camera position
             transform.position = newPosition;
         }
     }

@@ -19,11 +19,7 @@ public class PowerUpHealth : MonoBehaviour
     void PickUp(Collider player)
     {
         Debug.Log("Colisão entre o personagem e o powerup");
-        /*
-        PlayerController_LIFE stats = player.GetComponent<PlayerController_LIFE>();
-        stats.health *= Health;
-        */
-        //nome do codigo do personagem
+
 
         Destroy(gameObject);
     }

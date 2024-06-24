@@ -4,13 +4,13 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public Image warningImage; // A imagem de aviso que será mostrada
+    public Image warningImage;
 
     void Start()
     {
         if (warningImage != null)
         {
-            warningImage.enabled = false; // Inicialmente invisível
+            warningImage.enabled = false;
         }
     }
 
@@ -23,9 +23,9 @@ public class UIController : MonoBehaviour
     {
         if (warningImage != null)
         {
-            warningImage.enabled = true; // Torna a imagem visível
-            yield return new WaitForSeconds(4); // Espera 4 segundos
-            warningImage.enabled = false; // Torna a imagem invisível novamente
+            warningImage.enabled = true;
+            yield return new WaitForSeconds(4);
+            warningImage.enabled = false;
         }
     }
 }

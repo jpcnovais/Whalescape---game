@@ -35,11 +35,10 @@ public class HealthBar : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Verifica se o boss colidiu com a bomba
         if (collision.gameObject.CompareTag("Bomb"))
         {
             TakeDamage(15);
-            // Destroi a bomba ao colidir
+
             Destroy(collision.gameObject);
         }
     }

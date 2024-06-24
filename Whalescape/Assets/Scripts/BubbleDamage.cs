@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BubbleDamage : MonoBehaviour
 {
-   
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("player"))

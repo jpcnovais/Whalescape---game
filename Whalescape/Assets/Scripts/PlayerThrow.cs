@@ -3,21 +3,21 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject bombPrefab;      // Prefab da bomba
-    public float cooldownTime = 10f;   // Tempo de recarga
-    public Image cooldownImage;        // Imagem do círculo de recarga
+    public GameObject bombPrefab;
+    public float cooldownTime = 10f;
+    public Image cooldownImage;
 
     private float nextFireTime = 0f;
     private bool isCoolingDown = false;
 
 
-    public Transform launchPoint; // Ponto de lançamento do projétil
-    public float launchForce; // Força inicial do lançamento
-    public float angle; // Ângulo de lançamento em graus
+    public Transform launchPoint;
+    public float launchForce;
+    public float angle;
 
     void Start()
     {
-        // Configura o fillAmount para 1 no início para representar o cooldown completo
+
         cooldownImage.fillAmount = 1f;
     }
 
@@ -39,22 +39,18 @@ public class PlayerController : MonoBehaviour
     void FireBomb()
     {
         {
-            // Instancia a bomba na posição do ponto de lançamento
+
             GameObject bomb = Instantiate(bombPrefab, launchPoint.position, launchPoint.rotation);
 
-            // Obtém o Rigidbody da bomba
             Rigidbody rb = bomb.GetComponent<Rigidbody>();
 
-            // Define a direção de lançamento apenas no eixo Z
+
             Vector3 launchDirection = Vector3.forward;
 
-            // Converte a direção de lançamento para as coordenadas locais do jogador
             launchDirection = transform.TransformDirection(launchDirection);
 
-            // Aplica a força à bomba na direção do eixo Z
             rb.AddForce(launchDirection * launchForce, ForceMode.Impulse);
 
-            // Destrói a bomba após 3 segundos
             Destroy(bomb, 3f);
         }
     }

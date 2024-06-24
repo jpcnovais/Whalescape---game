@@ -36,7 +36,7 @@ public class SettingMenu : MonoBehaviour
 
     public void FecharSettingsPg_Inicial()
     {
-        
+
         settingsMenu.SetActive(false);
     }
 

@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         textoPontuacao = GetComponent<TMP_Text>();
-        score = PlayerPrefs.GetInt("score", 0); // Define um valor padrão de 0 se a chave não existir
+        score = PlayerPrefs.GetInt("score", 0);
         UpdateScoreText();
     }
 
@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (textoPontuacao != null)
         {
-            textoPontuacao.text = score.ToString(); // Atualiza o texto da pontuação
+            textoPontuacao.text = score.ToString();
         }
     }
 }

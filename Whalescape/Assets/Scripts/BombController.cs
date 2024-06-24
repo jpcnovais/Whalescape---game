@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class BombController : MonoBehaviour
 {
-    public float bombDamage = 15f; // Quantidade de dano da bomba
+    public float bombDamage = 15f;
 
-    //Audio
+
     AudioManager audioManager;
 
 
@@ -12,7 +12,6 @@ public class BombController : MonoBehaviour
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
-    //
 
     void OnCollisionEnter(Collision collision)
     {
@@ -24,7 +23,7 @@ public class BombController : MonoBehaviour
             {
                 bossHealth.TakeDamage(bombDamage);
             }
-            Destroy(gameObject); // Destruir a bomba após colidir com o boss
+            Destroy(gameObject);
         }
     }
 }
