@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class VideoEndSceneChanger : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
+    [SerializeField]
+    public string nextscene;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class VideoEndSceneChanger : MonoBehaviour
     void OnVideoEnd(VideoPlayer vp)
     {
 
-        SceneManager.LoadScene("paginainicial");
+        SceneManager.LoadScene(nextscene);
     }
+
 }

@@ -541,6 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 604481080}
+  nextscene: paginainicial
 --- !u!1 &850167056
 GameObject:
   m_ObjectHideFlags: 0
